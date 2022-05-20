@@ -82,16 +82,16 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'vc',
-        'USER': 'root',
-        'PASSWORD': 'user',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        
     }
 }
 
-
+# 'USER': 'root',
+#         'PASSWORD': 'user',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
