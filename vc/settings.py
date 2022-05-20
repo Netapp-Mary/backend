@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-le$*%seiy5lq(5=vs#u-qu2@5&bk9#(%q)cyuyf&uqj#3v6k9!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mary123vc.herokuapp.com']
+ALLOWED_HOSTS = ['mary123vc.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -140,7 +140,7 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
