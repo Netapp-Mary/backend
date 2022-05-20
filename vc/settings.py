@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-le$*%seiy5lq(5=vs#u-qu2@5&bk9#(%q)cyuyf&uqj#3v6k9!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mary123vc.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['mary123vc.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -38,11 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'companies'
+    'companies',
+    'corsheaders',
+  
 ]
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -71,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'vc.wsgi.application'
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
