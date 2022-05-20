@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'vc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mary',
+        'NAME': 'vc',
         'USER': 'root',
         'PASSWORD': 'user',
         'HOST': 'localhost',

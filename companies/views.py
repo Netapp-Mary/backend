@@ -1,6 +1,6 @@
 from rest_framework import generics
 from rest_framework import viewsets 
-from companies.models import Companies,Finances
+from companies.models import Companies,Finance
 from .serializers import CompanySerializer,FinanceSerializer
 
 class CompanyViewSet(viewsets.ModelViewSet):
@@ -8,5 +8,5 @@ class CompanyViewSet(viewsets.ModelViewSet):
     serializer_class = CompanySerializer
 
 class FinViewSet(viewsets.ModelViewSet):
-    queryset = Finances.objects.all()
+    queryset = Finance.objects.all()
     serializer_class = FinanceSerializer
